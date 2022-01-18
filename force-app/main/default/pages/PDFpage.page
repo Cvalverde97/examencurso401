@@ -1,0 +1,59 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-17-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:page controller="contrato" renderAs="pdf">
+ 
+<div style="font-family:sans-serif;"> 
+<h1>Firma de Contrato </h1>
+</div>
+ 
+<div style="font-family:sans-serif;text-align:left;font-size:12pt;">
+<p>Gracias, <b><apex:outputText value="{!contract.Fisrt_Name__c}"/></b>, por seleccionarnos.</p>
+ 
+<p>Sus informacion confirmada consta de:</p>
+ 
+<table>
+<tr><th>Nombre</th>
+    <td><apex:outputText value="{!contract.Fisrt_Name__c}" /></td>
+</tr>
+<tr><th>Apellido</th>
+    <td><apex:outputText value="{!contract.Last_Name__c}" /></td>
+</tr>
+<tr><th>DNI</th>
+    <td><apex:outputText value="{!contract.Onboarding__r.DNI__c}" /></td>
+</tr>
+<tr><th>Fecha de descarga de contrato</th>
+    <td><apex:outputText value="{!contract.Contract_down_date__c}" /></td>
+</tr>
+<tr><th>Desea descarga de contrato </th>
+    <td><apex:outputText value="{!contract.Contract_downloaded__c}" /></td>
+</tr>
+<tr><th>Acepto la informacion previa a la contratación</th>
+    <td><apex:outputText value="{!contract.Iaccepttheinformationpriorofcontracting__c}" /></td>
+</tr>
+<tr><th>Documento legal</th>
+    <td><apex:outputText value="{!contract.Legal_Documents_Version__c}" /></td>
+</tr>
+<tr><th>Paso</th>
+    <td><apex:outputText value="{!contract.Pasos__c}" /></td>
+</tr>
+<tr><th>Tipo de proceso</th>
+    <td><apex:outputText value="{!contract.Process_Type__c}" /></td>
+</tr>
+<tr><th>Version Final</th>
+    <td><apex:outputText value="{!contract.Landing_Version__c}" /></td>
+</tr>
+</table>
+    
+Atenteamente
+    
+<p><apex:outputText value="{!contract.Owner.Name}" /></p>
+</div>
+
+
+    
+</apex:page>

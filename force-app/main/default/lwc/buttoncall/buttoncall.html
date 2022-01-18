@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 01-16-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<template>
+	<lightning-card title="Petición de llamada" icon-name="standard:task">
+		
+   
+    <div class="slds-m-around--xx-large">
+      <div class="container-fluid">
+        <lightning-input  type="phone" required="required" label="Introduzca Numero de telefono" name="telefono" value={phone}   ></lightning-input>
+        <br>
+        <label title="Onboarding"  >Onboarding</label>
+      </div>
+      <br>
+      <lightning-button label="Enviar" onclick={Sending} variant="Neutral" ></lightning-button>
+		</div>	
+	</lightning-card>
+</template>
